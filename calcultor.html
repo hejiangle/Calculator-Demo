@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="description" content="简易计算器" />
+<title>简易计算器</title>
+  <script src="js/simple-calculate.js"></script>
+</head>
+<body>
+  <div id = "screen">
+    <input type="text" id="result"/>
+  </div>
+  <div id = "keys">
+    <div id = "row0">
+      <input type = "button" id="C" onclick="clean()" value="C"/> 
+    </div>
+    <div id = "row1">
+      <input type="button" id="7" onclick="dot('7')" value="7"/>
+      <input type="button" id="8" onclick="dot('8')" value="8"/>
+      <input type="button" id="9" onclick="dot('9')" value="9"/>
+      <input type="button" id="+" onclick="dot('+')" value="+"/>
+    </div>
+    <div id = "row2">
+      <input type="button" id="4" onclick="dot('4')" value="4"/>
+      <input type="button" id="5" onclick="dot('5')" value="5"/>
+      <input type="button" id="6" onclick="dot('6')" value="6"/>
+      <input type="button" id="-" onclick="dot('-')" value="-"/>
+    </div>
+    <div id = "row3">
+      <input type="button" id="1" onclick="dot('1')" value="1"/>
+      <input type="button" id="2" onclick="dot('2')" value="2"/>
+      <input type="button" id="3" onclick="dot('3')" value="3"/>
+      <input type="button" id="*" onclick="dot('*')" value="*"/>
+    </div>
+    <div id = "row4">
+      <input type="button" id="0" onclick="dot('0')" value="0"/>
+      <input type="button" id="." onclick="dot('.')" value="."/>
+    <!--  <input type="button" id="=" onclick="calculate()" /> -->
+      <input type="button" id="=" onclick="eva()" value="="/>
+      <input type="button" id="/" onclick="dot('/')" value="/"/>
+    </div>
+  </div>
+</body>
+</html>

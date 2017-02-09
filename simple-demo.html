@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="description" content="超简易计算器" />
+<title>超简易计算器</title>
+<script type="text/javascript">
+    function calculator(opt){
+      if(checkNumber()){
+        var x = parseFloat(document.getElementById('num1').value);
+        var y = parseFloat(document.getElementById('num2').value);
+        var z;
+        switch(opt){
+          case '+':
+            z = x + y;
+            break;
+          case '-':
+            z = x - y;
+            break;
+          case '*':
+            z = x * y;
+            break;
+          case '/':
+            z = x / y;
+            break;
+        }
+        document.getElementById('result').value = z;
+      }
+    }
+
+    function checkNumber(){
+      var a = document.getElementById('num1').value;
+      var b = document.getElementById('num2').value
+      if(a == "" || b == "" || isNaN(a) || isNaN(b)){
+        alter("请输入运算参数!")
+        return false;
+      }
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <div>
+    <div>数字1 ： <input type="text" id="num1"/></div>
+    <div>数字2 ： <input type="text" id="num2"/></div>
+    <div>运算类型：
+      <button id="add" onclick="calculator('+')">+</button>
+      <button id="sub" onclick="calculator('-')">-</button>
+      <button id="multi" onclick="calculator('*')">×</button>
+      <button id="divid" onclick="calculator('/')">/</button>
+    </div>
+    <div>结果 ： <input type="text" id="result"/></div>
+  </div>
+</body>
+</html>
